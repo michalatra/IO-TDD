@@ -177,4 +177,14 @@ public class StringUtilTest {
         assertEquals(3, result);
     }
 
+    @Test
+    public void countWordsInMultiEndlineSeparatedTextWithSpaceFilledLineTest() {
+        StringUtil util = new StringUtil();
+
+        String testText = "AlA\n     \n  \t   \t\n mA kOta";
+        Integer result = util.getNumberOfWords(testText);
+
+        assertEquals(3, result);
+    }
+
 }
